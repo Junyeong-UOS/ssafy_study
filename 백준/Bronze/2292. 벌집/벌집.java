@@ -8,11 +8,8 @@ public class Main {
 		long N = sc.nextInt();
 		long hex = 1;
 		long shell = 1;
-		long ans;
 		
-		if(N==1) {
-			ans = 1;
-		} else {
+		if(N!=1) {
 			while(N>hex) {
 				hex  += shell * 6;
 				shell++;
