@@ -17,7 +17,6 @@ public class Main {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
-			// x+1~ x+10; y+1 ~ y+10;
 
 			for (int j = x; j < x + 10; j++) {
 				for (int k = y; k < y + 10; k++) {
