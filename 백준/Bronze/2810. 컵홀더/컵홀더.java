@@ -14,13 +14,6 @@ public class Main {
 		int countCouples = 0;
 		
 		for(int i=0; i<seats.length; i++) {
-			if(seats[i].equals("L")) {
-				countCouples++;
-			}
-		}	
-		
-		
-		for(int i=0; i<seats.length; i++) {
 			
 			if(seats[i].equals("L")) {
 				if(countCouples%2 == 0) {
