@@ -10,7 +10,7 @@ class Main {
 
 		int N = Integer.parseInt(br.readLine());
 
-		int[][] whiteBoard = new int[102][102];
+		int[][] whiteBoard = new int[102][102]; // 둘레를 측정하기 위해 상하좌우 공백 1칸 만들었음
 
 		int length = 0;
 		
@@ -28,10 +28,13 @@ class Main {
 				}
 			}
 		}
+		// 여기까지 색종이1
+
 		
 		int[] dr = {-1, 1, 0, 0};
 		int[] dc = {0, 0, -1, 1};
-		
+
+		// 채워진 칸을 기준으로 옆 칸이 비어있으면 둘레+1
 		for(int r=1; r<101; r++) {
 			for(int c=1; c<101; c++) {
 				
