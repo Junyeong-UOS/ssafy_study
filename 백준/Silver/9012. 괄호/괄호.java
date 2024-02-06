@@ -35,16 +35,21 @@ public class Main {
 			Stack<Character> brackets = new Stack<>();
 
 			String bracketsStr = sc.next();
-			String a = check(bracketsStr);
-			while(!a.equals(check(a))) {
-				a = check(a);
-			}
-			
-			if(a.length() != 0) {
+			if(bracketsStr.length()%2!=0) {
 				System.out.println("NO");
-			} else
-				System.out.println("YES");
-			
+			}
+			else {
+				String a = check(bracketsStr);
+				while(!a.equals(check(a))) {
+					a = check(a);
+				}
+				
+				if(a.length() != 0) {
+					System.out.println("NO");
+				} else
+					System.out.println("YES");
+				
+			}
 		}
 	}
 
