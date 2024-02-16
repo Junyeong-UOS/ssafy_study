@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -17,25 +18,18 @@ public class Main {
 			int inputlen = input.length();
 			int n = Integer.parseInt(br.readLine()); // 배열에 들어있는 수의 개수
 
-			Deque<Integer> nums = new LinkedList<>();
+			Deque<Integer> nums = new ArrayDeque<>();
 			String inputlist = br.readLine(); // 배열
 
 			if (n == 0) {
 				for (int i = 0; i < inputlen; i++) {
 					if (input.charAt(i) == 'D') {
 						sb.append("error").append("\n");
-//						if (tc != T) {
-//							sb.append("\n");
-//						}
 						continue out;
 					}
 				}
 
 				sb.append(inputlist).append("\n");
-//				if (tc != T) {
-//					sb.append("\n");
-//				}
-
 			} else {
 				int inputlistlen = inputlist.length();
 
@@ -49,9 +43,6 @@ public class Main {
 					if (input.charAt(i) == 'D') {
 						if (nums.size() == 0) {
 							sb.append("error").append("\n");
-//							if (tc != T) {
-//								sb.append("\n");
-//							}
 							continue out;
 						} else if (dir) {
 							nums.pollFirst();
@@ -86,9 +77,6 @@ public class Main {
 				sb.append("]").append("\n");
 
 			}
-//			if (tc != T) {
-//				sb.append("\n");
-//			}
 		}
 		System.out.print(sb.toString());
 	}
